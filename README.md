@@ -2,7 +2,7 @@
 
 This is very much an alpha / proof-of-concept. This library allows you to use Vue from Kotlin - in a type-safe way!
 
-For an example, check out [vue.kt-test](https://github.com/frozenice/vue.kt) - here is a snippet:
+For an example, check out [vue.kt-test](https://github.com/frozenice/vue.kt-test) - here is a snippet:
 
 ```kotlin
 class AppData(val name: String, val todos: Array<String>) : VueData
