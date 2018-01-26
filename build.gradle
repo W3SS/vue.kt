@@ -86,18 +86,6 @@ dokka {
   }
 }
 
-bintray {
-  user = properties['bintray.user']
-  key = properties['bintray.apikey']
-
-  pkg {
-    repo = 'kotlin'
-    name = 'vue.kt'
-    licenses = ['Apache-2.0']
-    vcsUrl = 'https://github.com/frozenice/vue.kt.git'
-  }
-}
-
 def pomConfig = {
   licenses {
     license {
@@ -122,6 +110,10 @@ def pomConfig = {
 publishing {
   publications {
     JsLibrary(MavenPublication) {
+      groupId project.group
+      artifactId project.name
+      version project.version
+
       from components.java
       artifact sourcesJar
       artifact javadocJar
@@ -129,9 +121,35 @@ publishing {
       pom.withXml {
         def root = asNode()
         root.appendNode('description', 'Vue.js via Kotlin')
-        root.appendNode('name', 'vue.kt')
+        root.appendNode('name', project.name)
         root.appendNode('url', 'https://github.com/frozenice/vue.kt')
         root.children().last() + pomConfig
+      }
+    }
+  }
+}
+
+bintray {
+  // stored in ~/.gradle/gradle.properties
+  user = getProperty('bintray.user')
+  key = getProperty('bintray.apikey')
+
+  publications = ['JsLibrary']
+  publish = true
+
+  pkg {
+    repo = 'kotlin'
+    name = project.name
+    licenses = ['Apache-2.0']
+    vcsUrl = 'https://github.com/frozenice/vue.kt.git'
+
+    publicDownloadNumbers = true
+
+    version {
+      name = project.version
+
+      gpg {
+        sign = true // use bintray's keys
       }
     }
   }
