@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vue.kt.iml" filepath="$PROJECT_DIR$/.idea/modules/vue.kt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vue.kt_main.iml" filepath="$PROJECT_DIR$/.idea/modules/vue.kt_main.iml" group="vue.kt" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vue.kt_test.iml" filepath="$PROJECT_DIR$/.idea/modules/vue.kt_test.iml" group="vue.kt" />
+    </modules>
+  </component>
+</project>

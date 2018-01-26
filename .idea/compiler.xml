@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="kvue_main" target="1.8" />
+      <module name="kvue_test" target="1.8" />
+      <module name="vue-kotlin_main" target="1.8" />
+      <module name="vue-kotlin_test" target="1.8" />
+      <module name="vue.kt_main" target="1.8" />
+      <module name="vue.kt_test" target="1.8" />
+      <module name="vue_main" target="1.8" />
+      <module name="vue_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
